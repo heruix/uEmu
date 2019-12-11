@@ -44,6 +44,8 @@ Optionally **uEmu** can be loaded automatically as IDA plugin. In this case put 
 - It is possible to **Update CPU Context** manually or via JSON file (see below)
 - **Show Controls** displays window with Start/Run/Step/Stop buttons
 - **Show CPU Context** displays window with available registers
+- **Show CPU Extended Context** displays window with extended registers (FP/SIMD)
+- **Show Stack** displays window with current Stack
 - **Show Memory Range** allows to display specific memory region
 
 ### Start
@@ -114,6 +116,17 @@ Every time emulation stops, changed registers will be highlighted. Registers can
 
 It is possible to update CPU context via popup menu (see below).
 
+#### CPU Extended Context
+
+Current CPU Extended context.
+
+![](./Resources/screenshots/doc_regexview.png)
+
+Every time emulation stops, changed registers will be highlighted. Registers can be displayed in 1, 2 or 3 columns via popup menu.
+
+It is possible to update CPU context via popup menu (see below).
+
+
 #### Memory
 
 Use this view to observe memory regions for specified address and size. Comment will be displayed in a title for convenience.
@@ -131,7 +144,7 @@ Current context can also be saved in JSON file for future use.
 
 ![](./Resources/screenshots/doc_changectx.png)
 
-![](./Resources/screenshots/doc_regupdate.png)
+![](./Resources/screenshots/doc_regupdate.png)![](./Resources/screenshots/doc_regexupdate.png)
 
 ### Main Plugin Menu
 
@@ -164,9 +177,14 @@ Please note that only registers defined in a plugin are saved.
 - **Follow PC** scrolls IDA View to current PC during emulation
 - **Convert to Code automatically** is IDA data under cursor is not code
 - **Trace instructions** prints every instruction emulator is executing
+- **Lazy mapping** adds pages on demand instead of maping all existing regions on start
 
 ![](./Resources/screenshots/doc_settings.png)
 
+## Extensions
+
+It is also possible to add new functionality or build your project on top of **uEmu** using extension system.  
+Please find description with example [here](./Extensions/README.md)
 
 
 
